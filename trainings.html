@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تدريباتنا الشاملة - برامج الإسعافات الأولية والسلامة</title>
+    <!-- استيراد الخط العربي من جوجل -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0284c7;
+            --primary-dark: #0369a1;
+            --secondary-color: #0f172a;
+            --text-color: #334155;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --border-color: #e2e8f0;
+            --radius: 12px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--secondary-color), #1e293b);
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 1rem;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        header p {
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #94a3b8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin: 2.5rem 0 1.5rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border-color);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-img-container {
+            width: 100%;
+            height: 200px;
+            background-color: #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .card:hover .card-img-container img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title i {
+            color: var(--primary-color);
+        }
+
+        .card-desc {
+            list-style: none;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-desc li {
+            position: relative;
+            padding-right: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: #475569;
+        }
+
+        .card-desc li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .btn-register {
+            display: inline-block;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-register:hover {
+            background-color: var(--primary-dark);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--secondary-color);
+            color: #94a3b8;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>برامج التدريب الشاملة</h1>
+        <p>نقدم حزمة متكاملة من الدورات التدريبية المعتمدة في مجالات الإسعافات الأولية، مكافحة الحرائق، والدعم النفسي وتطوير الذات.</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- قسم الإسعافات الأولية -->
+        <h2 class="section-title"><i class="fa-solid fa-kit-medical"></i> دورات الإسعافات الأولية (First Aid)</h2>
+        
+        <div class="grid">
+            <!-- 1. PSC1 -->
+            <div class="card">
+                <div class="card-img-container">
+                    <!-- استبدل رابط الصورة برابط صورتك الفعلية داخل مجلد المشروع، مثلاً images/psc1.jpg -->
+                    <img src="images/psc1.jpg" alt="PSC1 التدريب">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title"><i class="fa-solid fa-shield-heart"></i> PSC1 - Prévention et Secours Civiques 1</h3>
+                    <ul class="card-desc">
+                        <li>مستوى أساسي يركز على تقنيات الإسعافات الأولية الأساسية والممارسات الوقائية.</li>
+                        <li>مناسب للمبتدئين والمهتمين بتعلم المهارات الأساسية.</li>
+                    </ul>
+                    <a href="#register" class="btn-register">اطلب التدريب</a>
+                </div>
+            </div>
+
+            <!-- 2. PSE1 -->
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="images/pse1.jpg" alt="PSE1 التدريب">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title"><i class="fa-solid fa-user-nurse"></i> PSE1 - Premiers Secours en Équipe 1</h3>
+                    <ul class="card-desc">
+                        <li>مستوى أكثر تقدمًا، يستهدف المتطوعين أو المحترفين الذين يعملون في فرق التدخل.</li>
+                        <li>يركز على الإسعافات الأولية الجماعية، بما في ذلك استخدام المعدات مثل الأوكسجين وأجهزة التنفس.</li>
+                    </ul>
+                    <a href="#register" class="btn-register">اطلب التدريب</a>
+                </div>
+            </div>
+
+            <!-- 3. PSE2 -->
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="images/pse2.jpg" alt="PSE2 التدريب">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title"><i class="fa-solid fa-users-viewfinder"></i> PSE2 - Premiers Secours en Équipe 2</h3>
+                    <ul class="card-desc">
+                        <li>يتطلب الحصول على شهادة PSE1 مسبقًا.</li>
+                        <li>يغطي تقنيات أكثر تخصصًا ومعمقة للإسعاف الجماعي، مثل التعامل مع الحالات الخطيرة.</li>
+                    </ul>
+                    <a href="#register" class="btn-register">اطلب التدريب</a>
+                </div>
+            </div>
+
+            <!-- 4. SST -->
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="images/sst.jpg" alt="SST التدريب">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title"><i class="fa-solid fa-hard-hat"></i> SST - Sauveteur Secouriste du Travail</h3>
+                    <ul class="card-desc">
+                        <li>مخصص للعاملين في بيئات العمل المختلفة.</li>
+                        <li>يركز على الوقاية من الحوادث المهنية والإسعافات الأولية في مكان العمل.</li>
+                    </ul>
+                    <a href="#register" class="btn-register">اطلب التدريب</a>
+                </div>
+            </div>
+
+            <!-- 5. CFAPSE -->
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="images/cfapse.jpg" alt="CFAPSE التدريب">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title"><i class="fa-solid fa-certificate"></i> CFAPSE</h3>
+                    <ul class="card-desc">
+                        <li>درجة متقدمة تتيح لحاملها التدخل بشكل احترافي.</li>
+                        <li>متطلب للعديد من المناصب الهامة في خدمات الطوارئ.</li>
+                    </ul>
+                    <a href="#register" class="btn-register">اطلب التدريب</a>
+                </div>
+            </div>
+
+            <!-- 6. Formateur en Secourisme -->
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="images/formateur.jpg" alt="Formateur en Secourisme">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title"><i class="fa-solid fa-chalkboard-user"></i> Formateur en Secourisme</h3>
+                    <ul class="card-desc">
+                        <li>مخصص لأولئك الذين يرغبون في تعليم الإسعافات الأولية ونشر الثقافة الوقائية.</li>
+                        <li>يتطلب مستويات متقدمة وشهادات تدريبية إضافية.</li>
+                    </ul>
+                    <a href="#register" class="btn-register">اطلب التدريب</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم مكافحة الحرائق -->
+        <h2 class="section-title"><i class="fa-solid fa-fire-extinguisher"></i> مكافحة الحرائق – Firefighting 🔥</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="images/ffc.jpg" alt="FFC التدريب">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title"><i class="fa-solid fa-fire"></i> FFC - Fire Fighting & Control</h3>
+                    <ul class="card-desc">
+                        <li>تدريب أساسي على مكافحة الحرائق وطرق السيطرة عليها في مراحله الأولى.</li>
+                        <li>يشمل التعرف على أنواع الحرائق، استخدام طفايات الحريق، وتقنيات الإخلاء الآمن.</li>
+                        <li>موجه للأفراد العاديين، فرق الطوارئ، وعمال السلامة المهنية.</li>
+                    </ul>
+                    <a href="#register" class="btn-register">اطلب التدريب</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم الدعم النفسي وتطوير الذات -->
+        <h2 class="section-title"><i class="fa-solid fa-brain"></i> الدعم النفسي وتطوير الذات 💙</h2>
+        <div class="grid">
+            <!-- PFA -->
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="images/pfa.jpg" alt="PFA التدريب">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title"><i class="fa-solid fa-hand-holding-heart"></i> PFA - Psychological First Aid</h3>
+                    <ul class="card-desc">
+                        <li>مستوى أساسي في تقديم الإسعافات الأولية النفسية للمصابين والمتضررين بالأزمات.</li>
+                        <li>يركز على الاستماع الفعال، التهدئة، وتوفير بيئة آمنة للدعم النفسي العاجل.</li>
+                        <li>مناسب للمسعفين، المتطوعين، والعاملين في الميدان الإنساني.</li>
+                    </ul>
+                    <a href="#register" class="btn-register">اطلب التدريب</a>
+                </div>
+            </div>
+
+            <!-- PDM -->
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="images/pdm.jpg" alt="PDM التدريب">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title"><i class="fa-solid fa-sun"></i> PDM - Positive Development Mindset</h3>
+                    <ul class="card-desc">
+                        <li>تدريب على تطوير التفكير الإيجابي وبناء الصلابة النفسية لمواجهة التحديات.</li>
+                        <li>يشمل إعادة تأطير الأفكار، التحفيز الذاتي، وإدارة التوتر بفعالية عالية.</li>
+                        <li>موجه للأفراد في بيئات العمل، المؤسسات التعليمية، والفرق التطوعية.</li>
+                    </ul>
+                    <a href="#register" class="btn-register">اطلب التدريب</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 جميع الحقوق محفوظة | تم الإعداد لتقديم أفضل برامج التدريب والتكوين.</p>
+    </footer>
+
+</body>
+</html>
